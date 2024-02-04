@@ -16,7 +16,7 @@ const app = Express();
 //middleware
 app.use(Cors({origin: '*'}))
 app.use(Express.json())
-app.use('/api', tokenMiddlware, allRoutes); //aqui todas las peticiones llegan a /api osea barra api //http://localhost:4000/api
+app.use('/api', allRoutes); //aqui todas las peticiones llegan a /api osea barra api //http://localhost:4000/api
 app.use(notFoundHandler)
 
 export default app;
